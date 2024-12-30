@@ -32,19 +32,22 @@ count = 0
 #If guess squared is larger than x_squared,then make guess the new upper bound
 # If guess squared is smaller than x_squared, then make guess the new lower bound 
 while (guess**2 != x_squared):
+
     guess = int((lower_bound + upper_bound)//2)
     count += 1
-
-    #catch exceptional case in which endless loop may occur
-    if guess == lower_bound:
-        guess += 1
 
     print(f"Your lower bound is {lower_bound} and your upper bound is {upper_bound}.")
     print(f"This is guess number {count}. Your guess is {guess}.")
     if guess**2 > x_squared:
-        upper_bound = guess
+        upper_bound = guess 
     else:
         lower_bound = guess
+    
+
+
+
+
+
     
 
 
